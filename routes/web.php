@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return redirect()->route('image.index');
+    return view('welcome');
 });
 
 Route::resource('image',\App\Http\Controllers\ImageController::class,['names'=>'image']);
+
+
+//student route
+Route::resource('student',\App\Http\Controllers\StudentController::class,['names'=>'student']);
